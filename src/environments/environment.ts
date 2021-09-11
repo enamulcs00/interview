@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  LoginUrl: 'https://rnfi.co.in/latest-backup/api/app/task/login/login',
+  OTPUrl: 'https://rnfi.co.in/latest-backup/api/app/task/login/verifyOtp',
+  GetDataUrl:'https://paysprint.in/service-api/testangular/api/TestAngular/getDynamicform',
+  UpdateUrl:'https://paysprint.in/service-api/testangular/api/TestAngular/createDynamicform',
+	TempStorage: 'LoginReminder',
 };
 
 /*

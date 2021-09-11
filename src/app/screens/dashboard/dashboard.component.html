@@ -1,0 +1,47 @@
+<nav class="navbar navbar-light bg-warning">
+    <div class="navbar-nav mr-auto" style="padding-top: 10px">
+        <a class="nav-item nav-link" style="margin-left: 50px" routerLink="/">Dashboard</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="nav-item nav-link text-light" routerLink="/">ICICI</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="nav-item nav-link text-light" href="javascript:void(0)" (click)="logout()">Logout</a>
+    </div>
+  </nav>
+  
+  <div class="card">
+    <div class="card-header" style="padding-left: 16px">
+      ICICI Screen
+    </div>
+    <div class="card-body">
+        <form [formGroup]="ICICIFORM">
+            <div formArrayName="specification">
+                <div class="form-row" *ngFor="let quantity of specification().controls; let i = index" [formGroupName]="i">
+                    <div class="form-group col-sm-2">
+                      <label for="inputEmail4">Accountholder</label>
+                      <input type="email" class="form-control" id="inputEmail4" formControlName="accountholder" placeholder="accountholder">
+                    </div>
+                    <div class="form-group col-sm-2">
+                      <label for="inputPassword4">Accountnumber</label>
+                      <input type="text" class="form-control" id="inputPassword4" placeholder="accountnumber" formControlName="accountnumber">
+                    </div>
+                    <div class="form-group col-sm-2">
+                      <label for="inputPassword4">Bankname</label>
+                      <input type="text" class="form-control" id="inputPassword4" placeholder="bankname" formControlName="bankname">
+                    </div>
+                    <div class="form-group col-sm-2">
+                      <label for="inputPassword4">Ifsccode</label>
+                      <input type="text" class="form-control" id="inputPassword4" placeholder="ifsccode" formControlName="ifsccode">
+                    </div>
+                    <div class="form-group col-sm-2">
+                      <label for="inputPassword4">Balance</label>
+                      <input type="text" class="form-control" id="inputPassword4" placeholder="balance" formControlName="balance">
+                    </div>
+                    <div class="form-group col-sm-2">
+                      <label for="inputPassword4">Address</label>
+                      <input type="text" class="form-control" id="inputPassword4" placeholder="Address" formControlName="Address">
+                    </div>
+                  </div>
+            </div>
+             <a class="btn btn-primary" (click)="Update()">Update data</a>
+        </form>
+      
+    </div>
+  </div>

@@ -1,0 +1,10 @@
+<div class="card">
+    <div class="card-header">
+      OTP Screen
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Enter otp</h5>
+      <ng-otp-input  (onInputChange)="onOtpChange($event)"  [config]="{length:5,allowNumbersOnly:true}"></ng-otp-input>
+      <a class="btn btn-primary" style="margin-top: 10px;" (click)="VerifyOtp()">Verify</a>
+    </div>
+  </div>
