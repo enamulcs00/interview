@@ -32,7 +32,7 @@ onSubmit() {
  }
  CallLoginFunc(){
    let formData = new FormData()
-   formData.append('token','e090c25187ee2b3f9f1f8a02747356641')
+   formData.append('token',environment.Token)
    formData.append('username',this.loginForm.value.username)
    formData.append('password',this.loginForm.value.password)
    this.service.post(environment.LoginUrl,formData).subscribe((res:any)=>{

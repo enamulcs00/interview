@@ -45,7 +45,7 @@ setSpecifications(item) {
 }
 GetICICIDATA(){ 
   let formData = new FormData()
-  formData.append('token','e090c25187ee2b3f9f1f8a02747356641')
+  formData.append('token',environment.Token)
   formData.append('authToken',this.loginInfo.authToken)
   this.service.post(environment.GetDataUrl,formData).subscribe((res:any)=>
   {
@@ -61,8 +61,8 @@ specification(): FormArray {
 Update(){
   if(this.ICICIFORM.valid){
     let formData = new FormData()
-    formData.append('token','e090c25187ee2b3f9f1f8a02747356641')
-    formData.append('authToken',this.loginInfo.authToken)
+  formData.append('token',environment.Token)
+  formData.append('authToken',this.loginInfo.authToken)
     formData.append('json',JSON.stringify(this.ICICIFORM.get('specification').value))
     this.service.post(environment.UpdateUrl,formData).subscribe((res:any)=>{
       if(res.statuscode===200){

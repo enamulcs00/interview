@@ -39,7 +39,7 @@ loginObject:any
     }else{
       if(this.OtpValue && this.OtpValue.length===5){
         let formData = new FormData()
-       formData.append('token','e090c25187ee2b3f9f1f8a02747356641')
+       formData.append('token',environment.Token)
        formData.append('authToken',this.loginObject.authToken)
        formData.append('otp',this.OtpValue)
        this.SendOtp(formData)

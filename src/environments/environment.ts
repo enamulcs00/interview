@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  Token:'e090c25187ee2b3f9f1f8a02747356641',
   LoginUrl: 'https://rnfi.co.in/latest-backup/api/app/task/login/login',
   OTPUrl: 'https://rnfi.co.in/latest-backup/api/app/task/login/verifyOtp',
   GetDataUrl:'https://paysprint.in/service-api/testangular/api/TestAngular/getDynamicform',
