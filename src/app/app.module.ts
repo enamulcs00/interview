@@ -13,12 +13,18 @@ import { TokenInterceptor } from 'src/app/interceptor/token.interceptor'
 import { ErrorInterceptor } from 'src/app/interceptor/error.interceptor';
 import { OtpComponent } from './screens/otp/otp.component'
 import { NgOtpInputModule } from 'ng-otp-input';
+import { SquarePipe } from './square.pipe';
+import { PipeTestComponent } from './pipe-test/pipe-test.component';
+import { ChangeColorDirective } from './change-color.directive';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    OtpComponent
+    OtpComponent,
+    SquarePipe,
+    PipeTestComponent,
+    ChangeColorDirective
   ],
   imports: [
     BrowserModule,
